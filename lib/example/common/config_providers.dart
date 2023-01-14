@@ -5,10 +5,21 @@ import 'package:taxze_re_flutter/example/common/re_app_state.dart';
 import 'package:taxze_re_flutter/example/common/re_storage.dart';
 
 class ConfigProviders {
+  ///初始化数据
   static final configInit = FutureProvider.autoDispose<void>((ref) async {
+    const int minCost = 2000;
+    int recorder = DateTime.now().millisecondsSinceEpoch;
     await Future.wait([
       SharedPreferences.getInstance(),
-    ]).then((value) => ReStorage.sp = value[0]);
+    ]).then((value) async {
+      int cost = DateTime.now().millisecondsSinceEpoch - recorder;
+      if (cost < minCost) {
+        await Future.delayed(Duration(milliseconds: minCost - cost))
+            .then((value) {});
+        return ReStorage.sp = value[0];
+      }
+      return ReStorage.sp = value[0];
+    });
   });
 
   static final config =

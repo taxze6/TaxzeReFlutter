@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:taxze_re_flutter/example/res/locale/re_localizations.dart';
 
 class ReCoursePage extends StatefulWidget {
   const ReCoursePage({Key? key}) : super(key: key);
@@ -10,6 +11,11 @@ class ReCoursePage extends StatefulWidget {
 class _ReCoursePageState extends State<ReCoursePage> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+        body: Center(
+      child: ElevatedButton(
+          onPressed: () {},
+          child: Text("Sliver ${ReLocalizations.of(context).series}")),
+    ));
   }
 }

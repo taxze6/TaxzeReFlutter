@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
-class Colours {
+class ReColors {
+  static const Color appMainBackGrayColor = Color(0xFFF6F6F6);
+  static const Color appMainBackWhiteColor = Color(0xFFFFFFFF);
   static const Color appMain = Color(0xFF4688FA);
   static const Color darkAppMain = Color(0xFF3F7AE0);
 
