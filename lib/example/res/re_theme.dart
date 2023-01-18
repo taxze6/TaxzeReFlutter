@@ -18,7 +18,7 @@ class AppTheme {
       // 页面背景色
       scaffoldBackgroundColor: isDarkMode ? ReColors.darkBgColor : Colors.white,
       // 主要用于Material背景色
-      canvasColor: isDarkMode ? ReColors.darkMaterialBg : Colors.white,
+      canvasColor: isDarkMode ? ReColors.darkMaterialBg : Colors.blue,
       // 文字选择色
       textSelectionTheme: TextSelectionThemeData(
         selectionColor: ReColors.appMain.withAlpha(70),
@@ -41,8 +41,8 @@ class AppTheme {
       highlightColor: Colors.transparent,
       appBarTheme: AppBarTheme(
         elevation: 0,
-        foregroundColor: isDarkMode ? Colors.white : ReColors.text,
-        backgroundColor: isDarkMode ? ReColors.darkBgColor : Colors.white,
+        foregroundColor: isDarkMode ? Colors.blue : ReColors.text,
+        backgroundColor: isDarkMode ? ReColors.darkBgColor : Colors.blue,
         shadowColor: isDarkMode ? Colors.transparent : Colors.black45,
         centerTitle: true,
         titleTextStyle: TextStyle(
