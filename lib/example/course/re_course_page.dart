@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:taxze_re_flutter/example/course/sliver/sliver_part1/sliver_main.dart';
+import 'package:taxze_re_flutter/example/course/sliver/sliver_main.dart';
 import 'package:taxze_re_flutter/example/res/locale/re_localizations.dart';
 import 'package:taxze_re_flutter/example/utils/router_utils.dart';
 
@@ -17,7 +17,8 @@ class _ReCoursePageState extends State<ReCoursePage> {
         body: Center(
       child: ElevatedButton(
           onPressed: () {
-            Navigator.of(context).push(Right2LeftRouter(child: SliverMain()));
+            Navigator.of(context)
+                .push(Right2LeftRouter(child: const SliverMain()));
           },
           child: Text("Sliver ${ReLocalizations.of(context).series}")),
     ));
