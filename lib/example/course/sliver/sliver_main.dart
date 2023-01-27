@@ -5,6 +5,8 @@ import 'package:taxze_re_flutter/example/course/sliver/sliver_part2/04SliverToBo
 import 'package:taxze_re_flutter/example/course/sliver/sliver_part2/05SliverPersistentHeader.dart';
 import 'package:taxze_re_flutter/example/course/sliver/sliver_part2/06SliverFixedExtentList.dart';
 import 'package:taxze_re_flutter/example/course/sliver/sliver_part2/08SliverPrototypeExtentList.dart';
+import 'package:taxze_re_flutter/example/course/sliver/sliver_part2/09SliverFillRemaining.dart';
+import 'package:taxze_re_flutter/example/course/sliver/sliver_part2/10SliverPadding.dart';
 import 'package:taxze_re_flutter/example/utils/router_utils.dart';
 
 import 'sliver_part1/01SliverList.dart';
@@ -48,17 +50,29 @@ class _SliverMainState extends State<SliverMain> {
                     goRouter: () => Navigator.of(context).push(Right2LeftRouter(
                         child: SliverPart2SliverPersistentHeader()))),
                 toChildButton(
-                    childName: "SliverPersistentHeader",
+                    childName: "SliverFixedExtentList",
                     goRouter: () => Navigator.of(context).push(
                           Right2LeftRouter(
                               child: SliverPart2SliverFixedExtentList()),
                         )),
                 toChildButton(
-                    childName: "SliverPersistentHeader",
+                    childName: "SliverFillViewport",
                     goRouter: () => Navigator.of(context).push(
                           Right2LeftRouter(
                               child: SliverPart2SliverFillViewport()),
                         )),
+                toChildButton(
+                    childName: "SliverFillRemaining",
+                    goRouter: () => Navigator.of(context).push(
+                      Right2LeftRouter(
+                          child: SliverPart2SliverFillRemaining()),
+                    )),
+                toChildButton(
+                    childName: "SliverPadding",
+                    goRouter: () => Navigator.of(context).push(
+                      Right2LeftRouter(
+                          child: SliverPart2SliverPadding()),
+                    )),
               ]),
               gridDelegate:
                   SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 4))

@@ -13,9 +13,19 @@ class _SliverPart2SliverFillRemainingState
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body:CustomScrollView(
+      body: CustomScrollView(
         slivers: [
-          SliverFillRemaining()
+          SliverList(delegate: SliverChildBuilderDelegate((ctx, index) {
+            return Container(
+              height: 50,
+              margin: EdgeInsets.all(10),
+              color: Colors.red,
+            );
+          },childCount: 5)),
+          SliverFillRemaining(
+            hasScrollBody: true,
+            child: FlutterLogo(),
+          )
         ],
       ),
     );
