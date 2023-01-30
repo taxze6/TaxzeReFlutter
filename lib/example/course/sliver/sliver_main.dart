@@ -7,6 +7,8 @@ import 'package:taxze_re_flutter/example/course/sliver/sliver_part2/06SliverFixe
 import 'package:taxze_re_flutter/example/course/sliver/sliver_part2/08SliverPrototypeExtentList.dart';
 import 'package:taxze_re_flutter/example/course/sliver/sliver_part2/09SliverFillRemaining.dart';
 import 'package:taxze_re_flutter/example/course/sliver/sliver_part2/10SliverPadding.dart';
+import 'package:taxze_re_flutter/example/course/sliver/sliver_part3/11SliverLayoutBuilder.dart';
+import 'package:taxze_re_flutter/example/course/sliver/sliver_part3/12SliverAnimatedList.dart';
 import 'package:taxze_re_flutter/example/utils/router_utils.dart';
 
 import 'sliver_part1/01SliverList.dart';
@@ -72,6 +74,18 @@ class _SliverMainState extends State<SliverMain> {
                     goRouter: () => Navigator.of(context).push(
                       Right2LeftRouter(
                           child: SliverPart2SliverPadding()),
+                    )),
+                toChildButton(
+                    childName: "SliverLayoutBuilder ",
+                    goRouter: () => Navigator.of(context).push(
+                      Right2LeftRouter(
+                          child: SliverPart3SliverLayoutBuilder()),
+                    )),
+                toChildButton(
+                    childName: "SliverAnimatedList ",
+                    goRouter: () => Navigator.of(context).push(
+                      Right2LeftRouter(
+                          child: SliverPart3SliverAnimatedList()),
                     )),
               ]),
               gridDelegate:
