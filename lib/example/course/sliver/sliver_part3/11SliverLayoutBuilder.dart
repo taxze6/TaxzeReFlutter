@@ -16,11 +16,12 @@ class _SliverPart3SliverLayoutBuilderState
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('SliverLayoutBuilder'),
-      ),
       body: CustomScrollView(
         slivers: [
+          SliverAppBar(
+            title: Text('SliverLayoutBuilder'),
+            pinned: true,
+          ),
           SliverLayoutBuilder(
               builder: (BuildContext context, SliverConstraints constraints) {
             if (constraints.userScrollDirection == ScrollDirection.forward) {

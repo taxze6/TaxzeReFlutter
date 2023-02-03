@@ -9,6 +9,11 @@ import 'package:taxze_re_flutter/example/course/sliver/sliver_part2/09SliverFill
 import 'package:taxze_re_flutter/example/course/sliver/sliver_part2/10SliverPadding.dart';
 import 'package:taxze_re_flutter/example/course/sliver/sliver_part3/11SliverLayoutBuilder.dart';
 import 'package:taxze_re_flutter/example/course/sliver/sliver_part3/12SliverAnimatedList.dart';
+import 'package:taxze_re_flutter/example/course/sliver/sliver_part3/13SliverOpacity.dart';
+import 'package:taxze_re_flutter/example/course/sliver/sliver_part3/14SliverAnimatedOpacity.dart';
+import 'package:taxze_re_flutter/example/course/sliver/sliver_part3/15SliverFadeTransition%20.dart';
+import 'package:taxze_re_flutter/example/course/sliver/sliver_part3/16SliverVisibility.dart';
+import 'package:taxze_re_flutter/example/course/sliver/sliver_part3/18SliverSafeArea.dart';
 import 'package:taxze_re_flutter/example/utils/router_utils.dart';
 
 import 'sliver_part1/01SliverList.dart';
@@ -66,27 +71,56 @@ class _SliverMainState extends State<SliverMain> {
                 toChildButton(
                     childName: "SliverFillRemaining",
                     goRouter: () => Navigator.of(context).push(
-                      Right2LeftRouter(
-                          child: SliverPart2SliverFillRemaining()),
-                    )),
+                          Right2LeftRouter(
+                              child: SliverPart2SliverFillRemaining()),
+                        )),
                 toChildButton(
                     childName: "SliverPadding",
                     goRouter: () => Navigator.of(context).push(
-                      Right2LeftRouter(
-                          child: SliverPart2SliverPadding()),
-                    )),
+                          Right2LeftRouter(child: SliverPart2SliverPadding()),
+                        )),
                 toChildButton(
                     childName: "SliverLayoutBuilder ",
                     goRouter: () => Navigator.of(context).push(
-                      Right2LeftRouter(
-                          child: SliverPart3SliverLayoutBuilder()),
-                    )),
+                          Right2LeftRouter(
+                              child: SliverPart3SliverLayoutBuilder()),
+                        )),
                 toChildButton(
                     childName: "SliverAnimatedList ",
                     goRouter: () => Navigator.of(context).push(
+                          Right2LeftRouter(
+                              child: SliverPart3SliverAnimatedList()),
+                        )),
+                toChildButton(
+                    childName: "SliverOpacity",
+                    goRouter: () => Navigator.of(context).push(
+                          Right2LeftRouter(child: SliverPart3SliverOpacity()),
+                        )),
+                toChildButton(
+                    childName: "SliverAnimatedOpacity",
+                    goRouter: () => Navigator.of(context).push(
+                          Right2LeftRouter(
+                              child: SliverPart3SliverAnimatedOpacity()),
+                        )),
+                toChildButton(
+                    childName: "SliverPart3SliverFadeTransition",
+                    goRouter: () => Navigator.of(context).push(
+                          Right2LeftRouter(
+                              child: SliverPart3SliverFadeTransition()),
+                        )),
+                toChildButton(
+                    childName: "SliverPart3SliverVisibility",
+                    goRouter: () => Navigator.of(context).push(
+                          Right2LeftRouter(
+                              child: SliverPart3SliverVisibility()),
+                        )),
+                toChildButton(
+                    childName: "SliverPart3SliverSafeArea",
+                    goRouter: () => Navigator.of(context).push(
                       Right2LeftRouter(
-                          child: SliverPart3SliverAnimatedList()),
+                          child: SliverPart3SliverSafeArea()),
                     )),
+
               ]),
               gridDelegate:
                   SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 4))
